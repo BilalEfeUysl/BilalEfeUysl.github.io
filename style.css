@@ -1,5 +1,14 @@
 /* ... önceki CSS kodları ... */
 
+.container {
+    /* background-color: #fff; Beyaz arka planı kaldır */
+    background-color: rgba(255, 255, 255, 0.9); /* Yarı saydam beyaz arka plan */
+    padding: 40px; /* Dolguyu artır */
+    border-radius: 15px; /* Köşe yuvarlaklığını artır */
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2); /* Gölgeyi belirginleştir */
+    text-align: center;
+    border: 1px solid #ddd; /* Açık gri ince kenarlık */
+}
 .no-message-container {
     display: none; /* Başlangıçta gizle */
     margin-top: 20px;
@@ -9,7 +18,7 @@
 .no-message-container.hidden {
     display: none; /* Gizli sınıfı için de gizle */
 }
-
+    
 .no-message-container .message-content p {
     font-size: 18px;
     color: #555;
@@ -20,4 +29,64 @@
     max-width: 300px; /* Fotoğrafın maksimum genişliği */
     height: auto;
     border-radius: 8px; /* Fotoğraf köşelerini yuvarlak yap */
+}
+body {
+    font-family: 'Arial', sans-serif;
+    /* background-color: #f4f4f4;  Düz gri arka planı kaldır */
+    background: linear-gradient(to right, #a8c0ff, #3ab7bf); /* Renk geçişli arka plan */
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.buttons button {
+    padding: 15px 30px; /* Dolguyu artır */
+    font-size: 18px; /* Yazı boyutunu artır */
+    font-weight: bold; /* Yazıyı kalınlaştır */
+    border: none;
+    border-radius: 8px; /* Köşe yuvarlaklığını artır */
+    cursor: pointer;
+    margin: 0 15px; /* Butonlar arası boşluğu artır */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Gölge geçiş efekti ekle */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Buton gölgesi */
+}
+
+.buttons button:hover {
+    transform: scale(1.08); /* Büyüme efektini biraz artır */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Hover gölgesi */
+}
+
+#yesButton {
+    background-color: #4CAF50; /* Yeşil "Evet" butonu */
+    color: white;
+    /* background-color: #4CAF50; yerine gradient kullanılabilir: */
+    /* background: linear-gradient(to bottom, #4CAF50, #388E3C); */
+}
+
+#noButton {
+    background-color: #f44336; /* Kırmızı "Hayır" butonu */
+    color: white;
+     /* background-color: #f44336; yerine gradient kullanılabilir: */
+     /* background: linear-gradient(to bottom, #f44336, #d32f2f); */
+}
+
+.question-container h1 {
+    color: #333;
+    margin-bottom: 25px; /* Alt boşluğu artır */
+    font-size: 2.2em; /* Yazı boyutunu artır */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Hafif metin gölgesi */
+}
+
+.no-message-container .message-content p {
+    font-size: 20px; /* Yazı boyutunu artır */
+    color: #555;
+    margin-bottom: 20px; /* Alt boşluğu artır */
+    font-weight: bold; /* Mesajı kalınlaştır */
+}
+
+body {
+    font-family: 'Roboto', sans-serif; /* Roboto yazı tipini kullan */
+    /* ... diğer body stilleri ... */
 }
