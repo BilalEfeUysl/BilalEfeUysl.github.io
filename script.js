@@ -3,24 +3,26 @@ const noButton = document.getElementById('noButton');
 const questionContainer = document.querySelector('.question-container');
 const noMessageContainer = document.querySelector('.no-message-container');
 const container = document.querySelector('.container');
+const buttonsContainer = document.querySelector('.buttons'); // Butonların konteynerini al
 
 yesButton.addEventListener('click', () => {
-    const containerRect = container.getBoundingClientRect(); // Konteynerin boyutlarını al
-    const buttonRect = yesButton.getBoundingClientRect(); // Butonun boyutlarını al
+    const containerRect = container.getBoundingClientRect();
+    const buttonRect = yesButton.getBoundingClientRect();
 
-    const maxX = containerRect.width - buttonRect.width; // Butonun konteyner içinde gidebileceği maksimum X mesafesi
-    const maxY = containerRect.height - buttonRect.height; // Butonun konteyner içinde gidebileceği maksimum Y mesafesi
+    const maxX = containerRect.width - buttonRect.width;
+    const maxY = containerRect.height - buttonRect.height;
 
-    const randomX = Math.random() * maxX; // Rastgele X koordinatı
-    const randomY = Math.random() * maxY; // Rastgele Y koordinatı
+    const randomX = Math.random() * maxX;
+    const randomY = Math.random() * maxY;
 
-    yesButton.style.position = 'absolute'; // Butonu mutlak pozisyona ayarla
-    yesButton.style.left = `${randomX}px`; // Rastgele X koordinatını ayarla
-    yesButton.style.top = `${randomY}px`; // Rastgele Y koordinatını ayarla
+    yesButton.style.position = 'absolute';
+    yesButton.style.left = `${randomX}px`;
+    yesButton.style.top = `${randomY}px`;
 });
 
 noButton.addEventListener('click', () => {
-    questionContainer.classList.add('hidden'); // Soru konteynerini gizle
-    noMessageContainer.classList.remove('hidden'); // Mesaj konteynerini görünür yap
-    noMessageContainer.style.display = 'block'; // Mesaj konteynerinin görünür olduğundan emin ol
+    questionContainer.classList.add('hidden');
+    noMessageContainer.classList.remove('hidden');
+    noMessageContainer.style.display = 'block';
+    buttonsContainer.style.display = 'none'; // Buton konteynerini gizle, böylece "Evet" butonu da gizlenir
 });
