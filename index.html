@@ -3,35 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hayır Sayfası</title>
-    <link rel="stylesheet" href="style.css"> <!-- Aynı stil dosyasını kullanabiliriz -->
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column; /* Öğeleri dikey hizala */
-            text-align: center; /* Metni ortala */
-        }
-        .message-container {
-            background-color: #fff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px; /* Mesaj ile fotoğraf arası boşluk */
-        }
-        img {
-            max-width: 300px; /* Fotoğrafın maksimum genişliği */
-            height: auto;
-            border-radius: 8px; /* Fotoğraf köşelerini yuvarlak yap */
-        }
-    </style>
+    <title>Canlı Web Sitesi</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="message-container">
-        <h1>Hayır Demeniz Üzdü!</h1>
-        <p>Belki başka zaman fikriniz değişir.</p>
+    <div class="container">
+        <div class="question-container">
+            <h1>Soru burada olacak?</h1>
+            <div class="buttons">
+                <button id="yesButton">Evet</button>
+                <button id="noButton">Hayır</button>
+            </div>
+        </div>
+        <div class="no-message-container hidden">
+            <div class="message-content">
+                <p id="noMessage">Hayır butonuna basıldı mesajı burada!</p>
+            </div>
+            <div class="image-content">
+                <img id="noImage" src="resim.jpg" alt="Üzgün ifade"> <!-- Buraya kendi resminizin adını ve yolunu girin -->
+            </div>
+        </div>
     </div>
-    <img src="monkey-thanos.gif" alt="Üzgün ifade"> <!-- Buraya kendi resminizin adını ve yolunu girin -->
+    <script src="script.js"></script>
 </body>
 </html>
